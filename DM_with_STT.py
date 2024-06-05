@@ -23,7 +23,7 @@ def ConvertJSON(file_name):
 stop_phrases = ["I'm done here.", "Canoodle", "Beam me up, Scotty.", "Did I stutter?", "Be me up, Scotty.", "Beat me up, Scotty.", "End voice transmission.", "And voice transmission.", "And the voice transmission."]
 SYSTEM_INSTRUCTIONS = f"You are ADAM, a dungeon master in a game of Dungeons and Dragons. Your job is to tell the story of the adventure. You will take your players through a magical adventure through the Forgotten Realms. The adventure will start in a tavern where the two adventurers meet each other. While telling this story, you must always follow these rules: "
 RULES = ["1) You must create many NPCs to populate your world.", "2) You must play the part of each creature other than the two players.","3) You may not make decisions for the players, only the NPCs. You may, however, decide what happens due to the actions that the players take.", "4) You must occasionally force the players to make a skill check of some sort."]
-API_KEY = "AIzaSyC3UKclriUg_KsFkd2ZeVZyrR3x3g01GIc"
+API_KEY = ""
 ACTIVATION_KEY = "f4"
 for rule in RULES:
     SYSTEM_INSTRUCTIONS += rule
