@@ -6,6 +6,7 @@ import keyboard
 import time
 #Speech-To-Text
 from RealtimeSTT import AudioToTextRecorder
+from ElevenLabs_TTS import text_to_speech_stream
 
 
 def vad_start():
@@ -27,24 +28,24 @@ RULES = ["1) You must create many NPCs to populate your world.", "2) You must pl
 API_KEY = "AIzaSyC3UKclriUg_KsFkd2ZeVZyrR3x3g01GIc"
 ACTIVATION_KEY = "f4"
 TERMINATION_KEY = "esc"
+ELEVENLABS_KEY = "a0ad55c0440f52030743d34c0d31f6b0"
 for rule in RULES:
     SYSTEM_INSTRUCTIONS += rule
 
 def generate_message(model, message, history):
-    engine = pyttsx3.init()
-    engine.setProperty('voice', engine.getProperty('voices')[0].id)
+
     history.append({"role": "user", "parts": message})
     response = model.generate_content(history).text
     history.append({"role": "model", "parts": response})
     model._system_instruction
     print("\n")
     print(response)
-    engine.say(response)
         
     dump = json.dumps(history, indent=2)
     with open("history.json", 'w') as file:
         file.write(dump)
-    engine.runAndWait()
+    text_to_speech_stream(response, ELEVENLABS_KEY)
+    
     return history
 
 def DM_w_SST(recorder):
