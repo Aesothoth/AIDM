@@ -52,7 +52,6 @@ def DM_w_SST(recorder):
     model = genai.GenerativeModel(model_name='gemini-1.5-pro-latest', system_instruction=SYSTEM_INSTRUCTIONS)
     history = ConvertJSON("history.json")
 
-    message = ""
     while (True):
         #wait until user presses "f4" key
         print(f"Press {ACTIVATION_KEY} to talk or {TERMINATION_KEY} to end")
