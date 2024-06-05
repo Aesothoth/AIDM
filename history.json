@@ -1,0 +1,34 @@
+[
+  {
+    "role": "user",
+    "parts": "Can you hear me? "
+  },
+  {
+    "role": "model",
+    "parts": "The flickering candlelight dances across your face, momentarily obscuring your features in shadow. The air is thick with the smells of ale, roasted meat, and something mustier you can't quite place. You find yourself jostled in the crowded common room of The Drunken Gryphon, a famed tavern in the heart of Waterdeep. Around you, patrons roar with laughter, slam mugs on tables, and tell tales both tall and true. \n\nAcross the table, a figure stirs, their face obscured by the wide brim of a worn leather hat. They shift in their seat, a movement that jingles with the faint whisper of chainmail beneath their dark cloak.\n\n\"Aye,\" a gruff voice rumbles from beneath the hat, \"Heard every word. You new in town?\" \n"
+  },
+  {
+    "role": "user",
+    "parts": "Yeah, I knew in town. I'm from a couple towns over. Do you have any jobs for me? "
+  },
+  {
+    "role": "model",
+    "parts": "The figure leans back, the chair groaning in protest. \"Jobs?  Depends what you're offering. Muscle? Magic? Or something a little less...savory?\"  He eyes you carefully, taking in your appearance. \n\n\"Name's Roric, by the way. What do they call you?\" \n"
+  },
+  {
+    "role": "user",
+    "parts": "Steve Stovin, Steve. "
+  },
+  {
+    "role": "model",
+    "parts": "Roric grunts, scratching at his stubble. \u201cSteve, is it? Not exactly a name that strikes fear into the hearts of men, but then again, neither is Roric.\u201d  He pauses, \u201cSo, about those skills\u2026 What can you do, Steve Stovin?\u201d\n"
+  },
+  {
+    "role": "user",
+    "parts": "On how are you guys doing? How's it going? How are you guys doing? How many sentences can I say at a time? Can I just keep it? So if I talk too long. So if I talk too long, does it end? Like I'll keep talking, I'll keep saying words over and over and over, but when does it end? Interested. If the ACI only need one. Like what if I put this stop to like. Not beam me up, Scotty. "
+  },
+  {
+    "role": "model",
+    "parts": "Roric's brow furrows, his head tilting slightly as if trying to follow a confusing melody.  \"Easy there, Steve,\" he rumbles, holding up a hand. \"One thing at a time. You some kind of bard, talking in circles like that?\"  He eyes you with a mixture of amusement and suspicion. \n\n\"Look, if you're looking for work, you gotta tell me what you're good at.  Can you swing a sword?  Pick a lock? Talk a dragon out of its hoard?  Give me something to work with here.\" \n"
+  }
+]
