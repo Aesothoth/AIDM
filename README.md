@@ -11,7 +11,7 @@ Open the file in the command terminal (Ask me if you don't know how)
 Type "venv\Scripts\activate.bat" into the terminal
 Type "python Elevenlabs_TTS.py" into the terminal
 
-#Use:
+# Use:
 Open the file in the command terminal (Ask me if you don't know how)
 Type "venv\Scripts\activate.bat" into the terminal
 Type "python DM_with_STT.py" into the terminal
