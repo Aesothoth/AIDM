@@ -55,5 +55,5 @@ def text_to_speech_stream(text: str, api_key) -> IO[bytes]:
 
 if __name__ == "__main__":
     
-    print(API_KEY)
+    GetVoices()
     text_to_speech_stream("Hello World!", API_KEY)
