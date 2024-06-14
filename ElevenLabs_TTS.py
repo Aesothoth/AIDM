@@ -1,8 +1,10 @@
-API_KEY = "a0ad55c0440f52030743d34c0d31f6b0"
 VOICE = "jsCqWAovK2LkecY7zXl4"
 VOICE2 = "RisC0PdfB4kk6ANQrosL"
 KNIGHTLY = "XvGc31UwFR8EZNcQiq4T"
 ADAM = "pNInz6obpgDQGcFmaJgB"
+#You will have to change this to add new voices
+API_KEY = "Your Elevenlabs API Key here"
+
 
 import os
 from typing import IO
@@ -14,7 +16,7 @@ import requests
 def GetVoices():
     url = "https://elevenlabs.io/app/voice-lab/share/899444b1d9eab0cea6d20686befafde9ccdc46ab4628e79973cf318a9497b138/fV5Pa91BEdDNCQu0TwZf"
     headers = {
-        'Authorization': 'Bearer a0ad55c0440f52030743d34c0d31f6b0',
+        'Authorization': f'Bearer {API_KEY}',
         'Content-Type': 'application/json'
     }
 
@@ -23,36 +25,35 @@ def GetVoices():
 
     # Handle the response data
     if response.status_code == 200:
-        voice_data = response.json()
+        pass
         # Process the voice data as needed
     else:
         print('Failed to retrieve voice data. Status code:', response.status_code)
-    return voice_data
 
 
 
 
 def text_to_speech_stream(text: str, api_key) -> IO[bytes]:
     client = ElevenLabs(api_key=api_key)
-    # Perform the text-to-speech conversion
+    # Perform the text-to-speech conversion  
     response = client.generate(
         text=text,
-        voice=KNIGHTLY,
+        voice=ADAM,
         stream=True)
+    try:
+        #If you have mpv, you can just stream the response directly (a bit faster)
+        stream(response)
+    except:
+        #If you don't have mpv, you must do this to stream the response
+        audio_stream = BytesIO()
+        for chunk in response:
+            if chunk:
+                audio_stream.write(chunk)
+        audio_stream.seek(0)
+        return audio_stream
 
-    # Create a BytesIO object to hold the audio data in memory
-    audio_stream = BytesIO()
-
-    # Write each chunk of audio data to the stream
-    for chunk in response:
-        if chunk:
-            audio_stream.write(chunk)
-
-    # Reset stream position to the beginning
-    audio_stream.seek(0)
-
-    # Return the stream for further use
-    stream(audio_stream)
 
 if __name__ == "__main__":
-    text_to_speech_stream("Hello World!")
+    
+    print(API_KEY)
+    text_to_speech_stream("Hello World!", API_KEY)
