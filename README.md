@@ -16,6 +16,11 @@ Type "venv\Scripts\activate.bat" into the terminal
 
 Type "python Elevenlabs_TTS.py" into the terminal
 
+## 4)
+Go to https://mpv.io/
+
+Install mpv to this folder
+
 # Use:
 Open the file in the command terminal (Ask me if you don't know how)
 
