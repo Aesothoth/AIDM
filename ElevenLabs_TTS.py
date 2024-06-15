@@ -1,6 +1,4 @@
-VOICE = "jsCqWAovK2LkecY7zXl4"
-VOICE2 = "RisC0PdfB4kk6ANQrosL"
-KNIGHTLY = "XvGc31UwFR8EZNcQiq4T"
+Nicole = "piTKgcLEGmPE4e6mEKli"
 ADAM = "pNInz6obpgDQGcFmaJgB"
 #You will have to change this to add new voices
 API_KEY = "Your Elevenlabs API Key here"
@@ -14,7 +12,7 @@ from elevenlabs.client import ElevenLabs
 import requests
 
 def GetVoices():
-    url = "https://elevenlabs.io/app/voice-lab/share/899444b1d9eab0cea6d20686befafde9ccdc46ab4628e79973cf318a9497b138/fV5Pa91BEdDNCQu0TwZf"
+    url = "Link to your voice here"
     headers = {
         'Authorization': f'Bearer {API_KEY}',
         'Content-Type': 'application/json'
@@ -38,22 +36,12 @@ def text_to_speech_stream(text: str, api_key) -> IO[bytes]:
     # Perform the text-to-speech conversion  
     response = client.generate(
         text=text,
-        voice=ADAM,
+        voice=Nicole, # This is where you change the voice (Adam is a stock voice)
         stream=True)
-    try:
-        #If you have mpv, you can just stream the response directly (a bit faster)
-        stream(response)
-    except:
-        #If you don't have mpv, you must do this to stream the response
-        audio_stream = BytesIO()
-        for chunk in response:
-            if chunk:
-                audio_stream.write(chunk)
-        audio_stream.seek(0)
-        return audio_stream
+
+    stream(response)
 
 
 if __name__ == "__main__":
-    
     GetVoices()
     text_to_speech_stream("Hello World!", API_KEY)
