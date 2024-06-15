@@ -38,4 +38,6 @@ Change the value of url to the url of the voice you want to add in the GetVoices
 Change the value of voice to the VoiceID of the voice you want in the text_to_speech_stream() function
 
 ## Example Video
+[![Watch the video](https://github.com/Aesothoth/AIDM/assets/90930838/1bffb6da-707e-4694-94a5-c10d50d54a6f)](https://www.youtube.com/watch?v=iJuDJHF12AU "AIDM v1.0 Example Video")
+
 
