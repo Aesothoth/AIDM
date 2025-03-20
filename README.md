@@ -1,3 +1,6 @@
+# Description:
+This is a small project that I made for fun. I wanted to test Genini API as well as the 11Labs AI voice service. This model specifically is made to be a temporary DM for a one-shot D&D game for my friends and I.
+
 # Installation:
 ## 1)
 Open ElevenLabs_TTS.py
